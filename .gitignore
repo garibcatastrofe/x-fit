@@ -27,3 +27,5 @@ Thumbs.db
 # Local TypeScript cache
 *.tsbuildinfo
 
+.opencode/
+AGENTS.md

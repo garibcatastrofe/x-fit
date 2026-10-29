@@ -1,0 +1,40 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "edit": "allow",
+    "bash": {
+      "*": "ask",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git check-ignore*": "allow",
+      "git ls-files*": "allow",
+      "pnpm --filter frontend lint": "allow",
+      "pnpm --filter frontend build": "allow",
+      "pnpm --filter backend lint": "allow",
+      "pnpm --filter backend test": "allow",
+      "pnpm --filter backend test:e2e": "allow",
+      "pnpm --filter backend test:cov": "allow",
+      "pnpm --filter backend build": "allow",
+      "pnpm build:frontend": "allow",
+      "pnpm build:backend": "allow",
+      "git add*": "ask",
+      "git commit*": "ask",
+      "git push*": "ask",
+      "git merge*": "ask",
+      "git rebase*": "ask",
+      "git reset*": "ask",
+      "git checkout*": "ask",
+      "git switch*": "ask",
+      "git branch -D*": "ask",
+      "docker compose down*": "ask",
+      "docker volume rm*": "ask",
+      "docker system prune*": "ask",
+      "prisma migrate*": "ask",
+      "pnpm exec prisma*": "ask",
+      "pnpm --filter backend exec prisma*": "ask",
+      "npx prisma*": "ask"
+    },
+    "external_directory": "ask"
+  }
+}

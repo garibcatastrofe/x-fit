@@ -27,5 +27,9 @@ Thumbs.db
 # Local TypeScript cache
 *.tsbuildinfo
 
-.opencode/
-AGENTS.md
+# Project instructions and OpenCode agent definitions must be versioned.
+# Keep prompt templates and unfinished skills local until they are completed.
+.opencode/*
+!.opencode/agents/
+.opencode/agents/*
+!.opencode/agents/*.md

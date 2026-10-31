@@ -6,6 +6,10 @@ import { apiReference } from '@scalar/nestjs-api-reference';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  // API versioning: every controller route is served under /api/v1/.
+  // Must stay ABOVE SwaggerModule.createDocument so @nestjs/swagger reflects
+  // the prefix in the OpenAPI paths. /docs is Express-level and stays at /docs.
+  app.setGlobalPrefix('api/v1');
   app.useGlobalPipes(new ValidationPipe());
 
   const config = new DocumentBuilder()
